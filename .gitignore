@@ -1,0 +1,44 @@
+# Dépendances du projet SantéPlus Secure
+node_modules/
+server/node_modules/
+.expo/
+dist/
+web-build/
+
+# Fichiers d'environnement contenant des secrets (CRITIQUE)
+.env
+.env.local
+.env.*.local
+server/.env
+
+# Fichiers de build intermédiaires LaTeX (conserver uniquement le .tex et le .pdf)
+*.aux
+*.toc
+*.out
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+
+# Builds natifs générés par prebuild
+android/
+ios/
+
+# Logs et debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# Fichiers système et éditeur
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# Fichiers de certificats et keystores
+*.keystore
+*.jks
+*.p12
+*.key
+*.mobileprovision

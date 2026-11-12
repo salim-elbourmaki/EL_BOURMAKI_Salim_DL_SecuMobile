@@ -1,0 +1,58 @@
+{
+  "expo": {
+    "name": "santeplus-secure",
+    "slug": "santeplus-secure",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#2E86AB"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "ma.santeplus.app",
+      "infoPlist": {
+        "NSFaceIDUsageDescription": "SantéPlus utilise Face ID pour protéger l'accès à vos ordonnances médicales (conformément à la Loi 09-08)."
+      },
+      "associatedDomains": [
+        "applinks:santeplus.ma"
+      ]
+    },
+    "android": {
+      "package": "ma.santeplus.app",
+      "adaptiveIcon": {
+        "backgroundColor": "#2E86AB"
+      },
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "autoVerify": true,
+          "data": [
+            {
+              "scheme": "https",
+              "host": "santeplus.ma",
+              "pathPrefix": "/rdv"
+            },
+            {
+              "scheme": "https",
+              "host": "santeplus.ma",
+              "pathPrefix": "/article"
+            }
+          ],
+          "category": ["BROWSABLE", "DEFAULT"]
+        }
+      ]
+    },
+    "plugins": [
+      [
+        "expo-local-authentication",
+        {
+          "faceIDPermission": "SantéPlus utilise Face ID pour protéger l'accès à vos ordonnances médicales."
+        }
+      ],
+      "expo-secure-store"
+    ]
+  }
+}
+
